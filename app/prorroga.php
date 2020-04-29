@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class prorroga extends Model
+class Prorroga extends Model
 {
     //
 }

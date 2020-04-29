@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateProjetoatividadesTable extends Migration
+class CreatePrazoUsosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateProjetoatividadesTable extends Migration
      */
     public function up()
     {
-        Schema::create('projetoatividades', function (Blueprint $table) {
+        Schema::create('prazo_usos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateProjetoatividadesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projetoatividades');
+        Schema::dropIfExists('prazo_usos');
     }
 }
