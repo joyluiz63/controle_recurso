@@ -15,12 +15,10 @@ class CreateContasTable extends Migration
     {
         Schema::create('contas', function (Blueprint $table) {
             $table->id();
-            $table->char('banco_atual',30)->nullable();
-            $table->char('banco_antigo',30)->nullable();
-            $table->char('cc_contabil_atual',30)->nullable();
-            $table->char('apl_contabil_atual',30)->nullable();
-            $table->char('cc_contabil_antigo',30)->nullable();
-            $table->char('apl_contabil_antigo',30)->nullable();
+            $table->string('banco')->nullable();//Numero da conta bancarioa
+            $table->string('contabil_cc')->nullable();//Numero da conta contabil corrente
+            $table->string('contabil_apl')->nullable();//Numero da conta contabil de aplicação
+            $table->foreignId('projeto_id')->references('id')->on('projetos');
             $table->timestamps();
         });
     }

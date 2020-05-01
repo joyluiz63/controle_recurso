@@ -15,12 +15,11 @@ class CreateRecursosTable extends Migration
     {
         Schema::create('recursos', function (Blueprint $table) {
             $table->id();
-            $table->text('descrrecurso');
-            $table->char('numprocesso', 30)->nullable();
-            $table->char('origem', 30);
-            $table->char('objeto', 30);
-            $table->text('destino')->nullable();
-            $table->decimal('valor');
+            $table->string('descrrecurso');//Informar se o recurso é proveniente emenda, portaria, convênio, etc
+            $table->char('numprocesso', 30)->nullable();//Informar o numero do processo, portaria, proposta, etc
+            $table->char('origem', 30); //Select: Federal, Estadual, Muncipal, Outros
+            $table->char('objeto', 30); //Informar se é custeio, obras, material permanente
+            $table->string('destino')->nullable();//Para onde se destina o objeto
             $table->timestamps();
         });
     }

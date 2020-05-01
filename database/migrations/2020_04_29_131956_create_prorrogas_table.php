@@ -15,12 +15,13 @@ class CreateProrrogasTable extends Migration
     {
         Schema::create('prorrogas', function (Blueprint $table) {
             $table->id();
-            $table->date('solicitado')->nullable();
-            $table->string('numoficio')->nullable();
-            $table->date('resposta')->nullable();
-            $table->char('documento', 20)->nullable();
-            $table->char('tempo_concedido', 20)->nullable();
-            $table->text('obsprorroga')->nullable();
+            $table->date('solicitado')->nullable();//Data em que foi solcitada a prorrogação
+            $table->string('numoficio')->nullable();//Numero do oficio que solicita a prorrogação
+            $table->date('resposta')->nullable();//Data da resposta a solcitação
+            $table->char('documento', 20)->nullable();//Numero da informação/documento
+            $table->char('concedido', 20)->nullable();//Dias, meses, ou ano concedido de prorrogação
+            $table->string('obsprorroga')->nullable();//Observações
+            $table->foreignId('recurso_id')->references('id')->on('recursos');
             $table->timestamps();
         });
     }

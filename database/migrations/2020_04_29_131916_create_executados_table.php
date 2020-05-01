@@ -15,18 +15,10 @@ class CreateExecutadosTable extends Migration
     {
         Schema::create('executados', function (Blueprint $table) {
             $table->id();
-            $table->string('descrexecutado');
-            $table->decimal('qtdexecutado');
-            $table->decimal('valorun');
-            $table->date('dtpedido')->nullable();
-            $table->string('numpedido')->nullable();
-            $table->date('dtempenho')->nullable();
-            $table->string('numempenho')->nullable();
-            $table->decimal('empenhado')->nullable();
-            $table->decimal('anulado')->nullable();
-            $table->decimal('liquidado')->nullable();
-            $table->decimal('pago')->nullable();
-            $table->string('numnotafiscal')->nullable();
+            $table->string('descrexecutado');//Descrição do item adquirido. Ex: Impressora laser Hp
+            $table->decimal('qtdexecutado');//Quantidade do item adquirido
+            $table->decimal('valorun');// Valor unitário empenhado
+            $table->foreignId('recurso_id')->references('id')->on('recursos');
             $table->timestamps();
         });
     }

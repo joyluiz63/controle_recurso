@@ -15,10 +15,10 @@ class CreateProjetosTable extends Migration
     {
         Schema::create('projetos', function (Blueprint $table) {
             $table->id();
-            $table->char('codatual', 30);
-            $table->char('codantigo', 30)->nullable();
-            $table->char('vincatual', 30);
-            $table->char('vincantigo', 30)->nullable();
+            $table->string('codigo');//Codigo orçamentário do projeto atividade
+            $table->string('vinculo');//Codigo do recurso vinculado
+            $table->string('validade');//Ano final do plano de saude
+            $table->foreignId('recurso_id')->references('id')->on('recursos');
             $table->timestamps();
         });
     }

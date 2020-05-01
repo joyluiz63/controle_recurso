@@ -15,9 +15,10 @@ class CreatePlanejadosTable extends Migration
     {
         Schema::create('planejados', function (Blueprint $table) {
             $table->id();
-            $table->string('descrplano');
-            $table->decimal('qtdplano');
-            $table->decimal('valorun')->nullable();
+            $table->string('descrplano');//Descrição do item planejado. Ex: Impressora laser Hp
+            $table->decimal('qtdplano');//Quantidade do item planejado
+            $table->decimal('valorun');// Valor unitário orçado
+            $table->foreignId('recurso_id')->references('id')->on('recursos');
             $table->timestamps();
         });
     }

@@ -15,9 +15,11 @@ class CreatePrazosTable extends Migration
     {
         Schema::create('prazos', function (Blueprint $table) {
             $table->id();
-            $table->date('recebido');
-            $table->date('inicial')->nullable();
-            $table->date('prorrogado')->nullable();
+            $table->decimal('valor');//Valor recebido
+            $table->date('recebido');//Data do recebimento do recurso
+            $table->date('inicial')->nullable();//Data do prazo de uso normal
+            $table->date('prorrogado')->nullable();//Data de uso concedida por prorrogação
+            $table->foreignId('recurso_id')->references('id')->on('recursos');
             $table->timestamps();
         });
     }

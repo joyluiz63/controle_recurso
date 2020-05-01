@@ -15,10 +15,11 @@ class CreateEventosTable extends Migration
     {
         Schema::create('eventos', function (Blueprint $table) {
             $table->id();
-            $table->date('dtevento')->nullable();
-            $table->string('descrdocumento')->nullable();
-            $table->string('numdocumento')->nullable();
-            $table->string('obsevento')->nullable();
+            $table->date('dtevento')->nullable();//Data em que aconteceu o fato relatado
+            $table->string('descrdocumento')->nullable();//Se houver, qual documento:Licitação, pregão, etc
+            $table->string('numdocumento')->nullable();//Numero do documento informado acima
+            $table->string('obsevento')->nullable();//Descrição do evento
+            $table->foreignId('recurso_id')->references('id')->on('recursos');
             $table->timestamps();
         });
     }
