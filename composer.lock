@@ -1190,6 +1190,7 @@
         },
         {
             "name": "nesbot/carbon",
+<<<<<<< HEAD
             "version": "2.33.0",
             "source": {
                 "type": "git",
@@ -1200,12 +1201,27 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4d93cb95a80d9ffbff4018fe58ae3b7dd7f4b99b",
                 "reference": "4d93cb95a80d9ffbff4018fe58ae3b7dd7f4b99b",
+=======
+            "version": "2.32.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/briannesbitt/Carbon.git",
+                "reference": "f10e22cf546704fab1db4ad4b9dedbc5c797a0dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/f10e22cf546704fab1db4ad4b9dedbc5c797a0dc",
+                "reference": "f10e22cf546704fab1db4ad4b9dedbc5c797a0dc",
+>>>>>>> 71b29225b8b170ef2a457ae7deb5d4ed2eec6f9b
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": "^7.1.8 || ^8.0",
+<<<<<<< HEAD
                 "symfony/polyfill-mbstring": "^1.0",
+=======
+>>>>>>> 71b29225b8b170ef2a457ae7deb5d4ed2eec6f9b
                 "symfony/translation": "^3.4 || ^4.0 || ^5.0"
             },
             "require-dev": {
@@ -1268,7 +1284,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2020-04-20T15:05:43+00:00"
+=======
+            "time": "2020-03-31T13:43:19+00:00"
+>>>>>>> 71b29225b8b170ef2a457ae7deb5d4ed2eec6f9b
         },
         {
             "name": "nikic/php-parser",

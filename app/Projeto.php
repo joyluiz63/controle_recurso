@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Executado extends Model
+class Projeto extends Model
 {
     protected $fillable = [
-        'descrexecutado', 'qtdexecutado', 'valorun', 'recurso_id',
+        'codigo', 'vinculo', 'validade', 'recurso_id' ,
     ];
 }

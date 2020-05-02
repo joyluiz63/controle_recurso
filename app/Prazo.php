@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Executado extends Model
+class Prazo extends Model
 {
     protected $fillable = [
-        'descrexecutado', 'qtdexecutado', 'valorun', 'recurso_id',
+        'valor', 'recebido', 'inicial', 'prorrogado', 'recurso_id',
     ];
 }
