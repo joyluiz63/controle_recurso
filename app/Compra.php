@@ -8,6 +8,6 @@ class Compras extends Model
 {
     protected $fillable = [
         'dtpedido', 'numpedido', 'dtempenho', 'numempenho', 'empenhado',
-        'empenhado', 'anulado', 'liquidado', 'pago', 'numnotafiscal', 'executado_id',
+        'anulado', 'liquidado', 'pago', 'numnotafiscal', 'executado_id',
     ];
 }
