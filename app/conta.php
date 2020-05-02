@@ -9,4 +9,9 @@ class Conta extends Model
      protected $fillable = [
          'banco', 'contabil_cc', 'contabil_apl', 'projeto_id',
      ];
+
+     public function recursos()
+     {
+         return $this->belongsTo('App\Recurso');
+     }
 }

@@ -10,4 +10,9 @@ class Evento extends Model
         'dtevento', 'descrdocumento', 'numdocumento', 
         'obsevento', 'recurso_id',
     ];
+
+    public function recursos()
+     {
+         return $this->belongsTo('App\Recurso');
+     }
 }

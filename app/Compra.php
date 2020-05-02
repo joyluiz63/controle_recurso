@@ -10,4 +10,9 @@ class Compras extends Model
         'dtpedido', 'numpedido', 'dtempenho', 'numempenho', 'empenhado',
         'anulado', 'liquidado', 'pago', 'numnotafiscal', 'executado_id',
     ];
+
+    public function executados()
+     {
+         return $this->belongsTo('App\Executado');
+     }
 }

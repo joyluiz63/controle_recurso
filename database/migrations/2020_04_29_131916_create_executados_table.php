@@ -18,7 +18,7 @@ class CreateExecutadosTable extends Migration
             $table->string('descrexecutado');//Descrição do item adquirido. Ex: Impressora laser Hp
             $table->decimal('qtdexecutado');//Quantidade do item adquirido
             $table->decimal('valorun');// Valor unitário empenhado
-            // $table->foreignId('recurso_id')->constrained('recursos_table');
+            $table->foreignId('recurso_id')->constrained('recursos');
             $table->timestamps();
         });
     }

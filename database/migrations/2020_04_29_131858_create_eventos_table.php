@@ -19,7 +19,7 @@ class CreateEventosTable extends Migration
             $table->string('descrdocumento')->nullable();//Se houver, qual documento:Licitação, pregão, etc
             $table->string('numdocumento')->nullable();//Numero do documento informado acima
             $table->string('obsevento')->nullable();//Descrição do evento
-            // $table->foreignId('recurso_id')->constrained('recursos_table');
+            $table->foreignId('recurso_id')->constrained('recursos');
             $table->timestamps();
         });
     }

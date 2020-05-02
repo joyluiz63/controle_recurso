@@ -18,7 +18,7 @@ class CreatePlanejadosTable extends Migration
             $table->string('descrplano');//Descrição do item planejado. Ex: Impressora laser Hp
             $table->decimal('qtdplano');//Quantidade do item planejado
             $table->decimal('valorun');// Valor unitário orçado
-            // $table->foreignId('recurso_id')->constrained('recursos_table');
+            $table->foreignId('recurso_id')->constrained('recursos');
             $table->timestamps();
         });
     }

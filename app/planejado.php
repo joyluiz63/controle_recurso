@@ -8,5 +8,10 @@ class Planejado extends Model
 {
     protected $fillable = [
         'descrplano', 'qtdplano', 'valorun', 'recurso_id',
-    ];    
+    ];
+    
+    public function recursos()
+     {
+         return $this->belongsTo('App\Recurso');
+     }
 }

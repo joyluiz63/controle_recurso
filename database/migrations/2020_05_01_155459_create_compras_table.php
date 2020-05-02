@@ -24,11 +24,13 @@ class CreateComprasTable extends Migration
             $table->decimal('liquidado')->nullable();//Valor liquidado
             $table->decimal('pago')->nullable();//Valor pago
             $table->string('numnotafiscal')->nullable();//Numero da nota fiscal
-            // $table->foreignId('executado_id')->constrained('executados_table');
+            $table->foreignId('executado_id')->constrained('executados');
             $table->timestamps();
         });
     }
 
+    //PARA ADICONAR COLUNAS CRIE UMA NOVA MIGRATION, COM O COMANDO:
+    //php artisan make:migration add_foreign_table_compras --table=compras 
     /**
      * Reverse the migrations.
      *

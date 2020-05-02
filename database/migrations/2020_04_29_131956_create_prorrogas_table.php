@@ -21,7 +21,7 @@ class CreateProrrogasTable extends Migration
             $table->char('documento', 20)->nullable();//Numero da informação/documento
             $table->char('concedido', 20)->nullable();//Dias, meses, ou ano concedido de prorrogação
             $table->string('obsprorroga')->nullable();//Observações
-            // $table->foreignId('recurso_id')->constrained('recursos_table');
+            $table->foreignId('recurso_id')->constrained('recursos');
             $table->timestamps();
         });
     }
