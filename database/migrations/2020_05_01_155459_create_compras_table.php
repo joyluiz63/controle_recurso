@@ -24,7 +24,7 @@ class CreateComprasTable extends Migration
             $table->decimal('liquidado')->nullable();//Valor liquidado
             $table->decimal('pago')->nullable();//Valor pago
             $table->string('numnotafiscal')->nullable();//Numero da nota fiscal
-            $table->foreignId('executado_id')->references('id')->on('executados');
+            // $table->foreignId('executado_id')->constrained('executados_table');
             $table->timestamps();
         });
     }

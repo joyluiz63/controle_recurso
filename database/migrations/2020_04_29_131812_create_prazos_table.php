@@ -19,7 +19,7 @@ class CreatePrazosTable extends Migration
             $table->date('recebido');//Data do recebimento do recurso
             $table->date('inicial')->nullable();//Data do prazo de uso normal
             $table->date('prorrogado')->nullable();//Data de uso concedida por prorrogação
-            $table->foreignId('recurso_id')->references('id')->on('recursos');
+            // $table->foreignId('recurso_id')->constrained('recursos_table');
             $table->timestamps();
         });
     }

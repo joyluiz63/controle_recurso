@@ -18,7 +18,7 @@ class CreateProjetosTable extends Migration
             $table->string('codigo');//Codigo orçamentário do projeto atividade
             $table->string('vinculo');//Codigo do recurso vinculado
             $table->string('validade');//Ano final do plano de saude
-            $table->foreignId('recurso_id')->references('id')->on('recursos');
+            // $table->foreignId('recurso_id')->constrained('recursos_table');
             $table->timestamps();
         });
     }

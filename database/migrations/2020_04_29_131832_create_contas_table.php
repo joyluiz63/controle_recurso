@@ -18,7 +18,7 @@ class CreateContasTable extends Migration
             $table->string('banco')->nullable();//Numero da conta bancarioa
             $table->string('contabil_cc')->nullable();//Numero da conta contabil corrente
             $table->string('contabil_apl')->nullable();//Numero da conta contabil de aplicação
-            $table->foreignId('projeto_id')->references('id')->on('projetos');
+            // $table->foreignId('projeto_id')->constrained('projetos_table');
             $table->timestamps();
         });
     }
