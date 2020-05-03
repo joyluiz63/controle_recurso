@@ -26,6 +26,6 @@ class LoginController extends Controller
     public function sair()
     {
       Auth::logout();
-      return redirect()->route('site.home');
+      return redirect()->route('home');
     }
 }

@@ -20,12 +20,12 @@
               <a href="#!" class="brand-logo" >Controle de Recursos</a>
               <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
+              <li><a href="{{ route('home') }}">Home</a></li>
 
                 @if (@Auth::guest())
                   <li><a href="{{route('login')}}">Login</a></li>
                 @else
-                  <li><a href="{{route('admin.cursos')}}">Cursos</a></li>
+                  <li><a href="{{route('admin.users')}}">Usuarios</a></li>
                   <li><a href="#">{{ Auth::user()->name }}</a></li>
                   <li><a href="{{route('login.sair')}}">Sair</a></li>
                 @endif
@@ -36,12 +36,12 @@
         </nav>
 
         <ul class="sidenav" id="mobile">
-        <li><a href="/">Home</a></li>
+        <li><a href="home">Home</a></li>
 
         @if (@Auth::guest())
           <li><a href="{{route('login')}}">Login</a></li>
         @else
-          <li><a href="{{route('admin.cursos')}}">Cursos</a></li>
+          <li><a href="{{route('admin.users')}}">Usuarios</a></li>
           <li><a href="#">{{ Auth::user()->name }}</a></li>
           <li><a href="{{route('login.sair')}}">Sair</a></li>
         @endif

@@ -25,3 +25,10 @@ Route::post('/admin/users/salvar', ['as'=>'admin.users.salvar', 'uses'=>'Admin\U
 Route::get('/admin/users/editar/{id}', ['as'=>'admin.users.editar', 'uses'=>'Admin\UserController@editar']);
 Route::put('/admin/users/atualizar/{id}', ['as'=>'admin.users.atualizar', 'uses'=>'Admin\UserController@atualizar']);
 Route::get('/admin/users/deletar/{id}', ['as'=>'admin.users.deletar', 'uses'=>'Admin\UserController@deletar']);
+
+Route::get('/admin/recursos', ['as'=>'admin.recursos', 'uses'=>'Admin\RecursoController@index']);
+Route::get('/admin/recursos/adicionar', ['as'=>'admin.recursos.adicionar', 'uses'=>'Admin\RecursoController@adicionar']);
+Route::post('/admin/recursos/salvar', ['as'=>'admin.recursos.salvar', 'uses'=>'Admin\RecursoController@salvar']);
+Route::get('/admin/recursos/editar/{id}', ['as'=>'admin.recursos.editar', 'uses'=>'Admin\RecursoController@editar']);
+Route::put('/admin/recursos/atualizar/{id}', ['as'=>'admin.recursos.atualizar', 'uses'=>'Admin\RecursoController@atualizar']);
+Route::get('/admin/recursos/deletar/{id}', ['as'=>'admin.recursos.deletar', 'uses'=>'Admin\RecursoController@deletar']);
