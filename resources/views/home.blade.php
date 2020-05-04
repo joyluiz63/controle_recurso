@@ -6,27 +6,23 @@
   <div class="container">
     <h5 class='center'>Lista de Recursos </h5>
     <div class="row">
-        MOSTRA DADOS DO BANCO
-     {{--  @foreach ($cursos as $curso)
+    {{-- MOSTRA DADOS DO BANCO --}}
+       @foreach ($recursos as $recurso)
         <div class="col s12 m4">
          <div class="card">
-           <div class="card-image">
-            <img src="{{ asset($curso->imagem) }}"> 
-
-           </div>
            <div class="card-content">
-             <h4>{{ $curso->titulo }}</h4>
-             <p>{{ $curso->descricao }}</p>
+             <h4>{{ $recurso->descrrecurso }}</h4>
+             <p>{{ $recurso->destino }}</p>
            </div>
            <div class="card-action">
              <a href="#">Ver mais...</a>
            </div>
          </div>
         </div>
-      @endforeach --}}
+      @endforeach
  </div>
  <div class="row" >
-   {{-- {{ $cursos->links() }} --}}
+   {{ $recursos->links() }} 
  </div>
 
   </div>

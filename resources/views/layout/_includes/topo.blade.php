@@ -17,7 +17,6 @@
       <header>
         <nav>
             <div class="nav-wrapper teal lighten-2">
-              <a href="#!" class="brand-logo" >Controle de Recursos</a>
               <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
               <ul class="right hide-on-med-and-down">
               <li><a href="{{ route('home') }}">Home</a></li>
@@ -25,6 +24,15 @@
                 @if (@Auth::guest())
                   <li><a href="{{route('login')}}">Login</a></li>
                 @else
+                  <li><a href="{{route('admin.recursos')}}">Recursos</a></li>
+                  <li><a href="{{route('admin.projetos')}}">Projetos</a></li>
+                  <li><a href="{{route('admin.eventos')}}">Eventos</a></li>
+                  <li><a href="{{route('admin.contas')}}">Contas</a></li>
+                  <li><a href="{{route('admin.prazos')}}">Prazos</a></li>
+                  <li><a href="{{route('admin.planejados')}}">Planos</a></li>
+                  <li><a href="{{route('admin.executados')}}">Executados</a></li>
+                  <li><a href="{{route('admin.compras')}}">Compras</a></li>
+                  <li><a href="{{route('admin.prorrogas')}}">Prorrogações</a></li>
                   <li><a href="{{route('admin.users')}}">Usuarios</a></li>
                   <li><a href="#">{{ Auth::user()->name }}</a></li>
                   <li><a href="{{route('login.sair')}}">Sair</a></li>
@@ -49,5 +57,3 @@
         </ul>
       </header>
   </div>
-</body>  
-</html>  

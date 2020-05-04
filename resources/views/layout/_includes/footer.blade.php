@@ -1,3 +1,5 @@
+</body>  
+ 
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -6,5 +8,9 @@
     $(document).ready(function() {
       M.updateTextFields();
       $('.sidenav').sidenav();
+    });
+    
+    $(document).ready(function(){
+      $('select').formSelect();
     });
 </html>

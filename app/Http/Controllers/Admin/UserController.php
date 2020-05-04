@@ -49,6 +49,7 @@ class UserController extends Controller
         ]);
 
         $dados = $req->all();
+        $dados['password'] = bcrypt($dados['password']);
         User::find($id)->update($dados);
         return redirect()->route('admin.users');
 
