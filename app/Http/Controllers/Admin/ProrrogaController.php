@@ -10,13 +10,13 @@ class ProrrogaController extends Controller
 {
     public function index()
     {
-        $registros = Proroga::all();
+        $registros = Prorroga::all();
         return view('admin.prorogas.index', compact('registros'));
     }
 
     public function visualizar($id)
     {
-        $registro = Proroga::find($id);
+        $registro = Prorroga::find($id);
         return view('admin.prorogas.visualizar');
     }
 
@@ -28,27 +28,27 @@ class ProrrogaController extends Controller
     public function salvar(Request $req)
     {
         $dados = $req->all();
-        Proroga::create($dados);
+        Prorroga::create($dados);
 
         return redirect()->route('admin.prorogas');
     }
 
     public function editar($id)
     {
-        $registro = Proroga::find($i)
+        $registro = Prorroga::find($i)
         return view('admin.prorogas.editar', compact('registro'));
     }
 
     public function atualizar(Request $req, $id)
     {
         $dados = $req->all();
-        Proroga::find($id)->update($dados);
+        Prorroga::find($id)->update($dados);
         return redirect()->route('admin.prorogas');
     }
 
     public function deletar($id)
     {
-        Proroga::find($id)->delete();
+        Prorroga::find($id)->delete();
         return redirect()->route('admin.prorogas')
     }
 }
